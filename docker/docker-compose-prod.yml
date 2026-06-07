@@ -18,7 +18,7 @@ services:
       - net
 
   quality-flow:
-    image: aknregistry.azurecr.io/akeron-quality-flow:${VERSIONIMAGE}
+    image: ${IMAGE_REGISTRY}/quality-flow:${VERSIONIMAGE}
     container_name: quality-flow
     ports:
       - "9082:9082"
