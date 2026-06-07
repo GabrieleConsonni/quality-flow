@@ -1,0 +1,4 @@
+from brokers.models.connections.amazon.sqs_amazon_connection_config import SQSAmazonConnectionConfig
+from brokers.models.connections.elastiqmq.sqs_elasticmq_connection_config import SQSElasticmqConnectionConfig
+
+QueueConnectionConfigTypes = SQSAmazonConnectionConfig | SQSElasticmqConnectionConfig

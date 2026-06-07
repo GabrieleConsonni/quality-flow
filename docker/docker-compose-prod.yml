@@ -1,0 +1,30 @@
+networks:
+  net:
+    name: ${NETWORK}
+    external: true
+
+services:
+
+  elasticmq:
+    image: softwaremill/elasticmq-native
+    container_name: elasticmq
+    ports:
+      - "9324:9324"
+      - "9325:9325"
+    volumes:
+      - ./elasticmq/elasticmq.conf:/opt/elasticmq.conf
+    restart: unless-stopped
+    networks:
+      - net
+
+  quality-flow:
+    image: aknregistry.azurecr.io/akeron-quality-flow:${VERSIONIMAGE}
+    container_name: quality-flow
+    ports:
+      - "9082:9082"
+    networks:
+      - net
+    environment:
+      - DATABASE_URL=postgresql://${USER_DB}:${PASS_DB}@${URL_DB}:${PORT_DB}/${DB_NAME}
+      - HOST_IP=elasticmq
+    restart: unless-stopped

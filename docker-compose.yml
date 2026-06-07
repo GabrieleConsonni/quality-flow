@@ -1,0 +1,30 @@
+services:
+  quality-flow:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    environment:
+      - APP_ENV=docker
+      - HOST_IP=host.docker.internal
+    ports:
+      - "9082:9082"
+      - "5678:5678"
+    image: quality-flow
+    container_name: quality-flow
+    working_dir: /quality-flow
+    volumes:
+      - ./app:/quality-flow/app
+      - ./alembic:/quality-flow/alembic
+      - ./application-docker.yaml:/quality-flow/application-docker.yaml
+      - ./application.yaml:/quality-flow/application.yaml
+    entrypoint: ["sh", "-c"]
+    command:
+      [
+        "pip install debugpy && python -Xfrozen_modules=off -m debugpy --listen 0.0.0.0:5678 -m uvicorn main:app --host 0.0.0.0 --port 9082 --reload --reload-dir /quality-flow/app"
+      ]
+    networks:
+      - wildflyNet
+
+networks:
+  wildflyNet:
+    external: true

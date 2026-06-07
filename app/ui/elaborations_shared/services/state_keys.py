@@ -1,0 +1,9 @@
+TEST_EDITOR_JSON_ARRAYS_KEY = "test_editor_json_arrays"
+TEST_EDITOR_DATABASE_DATASOURCES_KEY = "test_editor_database_datasources"
+TEST_EDITOR_BROKERS_KEY = "test_editor_brokers"
+TEST_EDITOR_QUEUES_BY_BROKER_KEY = "test_editor_queues_by_broker"
+SUITE_FEEDBACK_KEY = "suites_feedback"
+ADD_TEST_OPERATION_DIALOG_OPEN_KEY = "add_test_operation_dialog_open"
+ADD_TEST_OPERATION_DIALOG_NONCE_KEY = "add_test_operation_dialog_nonce"
+ADD_TEST_OPERATION_DIALOG_TARGET_TEST_UI_KEY = "add_test_operation_dialog_target_test_ui_key"
+

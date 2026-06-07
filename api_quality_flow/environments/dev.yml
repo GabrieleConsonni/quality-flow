@@ -1,0 +1,4 @@
+name: dev
+variables:
+  - name: BASE_URL
+    value: http://10.201.10.8:9082

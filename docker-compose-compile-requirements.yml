@@ -1,0 +1,8 @@
+services:
+  compiler:
+    image: python:3.13-slim-bookworm
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: >
+      sh -c "pip install --no-cache-dir pip-tools && pip-compile requirements.in -o docker-requirements.txt"

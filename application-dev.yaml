@@ -1,0 +1,10 @@
+akeron:
+  multitenant:
+    tenants:
+      - tenantId: akn-dev-local
+        database:
+          name: akn-dev-local
+          host: localhost
+          port: 5432
+          user: postgres
+          password: password

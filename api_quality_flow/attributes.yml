@@ -1,0 +1,49 @@
+info:
+  name: attributes
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{BASE_URL}}/mock/vulki/commondata/ws/rest/public/v1/attributes/DbId/1"
+  headers:
+    - name: akn-device-id
+      value: TECH
+  body:
+    type: json
+    data: |-
+      {
+        "codAttributo": "VIOLET",
+        "descLingua0": "Description 0",
+        "descLingua1": "Description 1",
+        "descLingua2": "Description 2",
+        "descLingua3": "Description 3",
+        "partitaIva": "IT12345678901",
+        "codiceFiscale": "RSSMRA85M01H501Z",
+        "cessato": false,
+        "noteCessato": "Attribute ceased due to company closure.",
+        "pianificabile": false,
+        "dataCessazione": "2025-11-13",
+        "info": {
+          "name": "John",
+          "surname": "Doe",
+          "email": "john.doe@example.com",
+          "telefono": "+39 3331234567",
+          "indirizzo": "123",
+          "cap": "20100",
+          "comune": "Milan",
+          "provincia": "MI",
+          "nazione": "Italy",
+          "stringa1": "Additional info 1",
+          "stringa2": "Additional info 2",
+          "data1": "2025-11-13T10:15:30",
+          "data2": "2025-11-14T09:00:00",
+          "percentualeRecuperoDebito": 75.5
+        }
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

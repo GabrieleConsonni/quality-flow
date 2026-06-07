@@ -1,0 +1,10 @@
+akeron:
+  multitenant:
+    tenants:
+      - tenantId: ${oc.env:TENANT_ID}
+        database:
+          name: ${oc.env:DB_NAME}
+          host: ${oc.env:DB_HOST}
+          port: ${oc.env:DB_PORT}
+          user: ${oc.env:DB_USER}
+          password: ${oc.env:DB_PASSWORD}

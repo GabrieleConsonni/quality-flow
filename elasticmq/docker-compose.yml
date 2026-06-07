@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  elasticmq:
+    image: softwaremill/elasticmq-native
+    container_name: elasticmq
+    ports:
+      - "9324:9324" # API compatibile SQS
+      - "9325:9325" # Console web
+    volumes:
+      - ./elasticmq.conf:/opt/elasticmq.conf

@@ -1,0 +1,6 @@
+SELECTED_MOCK_SERVER_ID_KEY = "selected_mock_server_id"
+MOCK_SERVER_EDITOR_DRAFT_KEY = "mock_server_editor_draft"
+MOCK_SERVER_EDITOR_NONCE_KEY = "mock_server_editor_nonce"
+MOCK_SERVER_EDITOR_FEEDBACK_KEY = "mock_server_editor_feedback"
+MOCK_SERVER_EDITOR_ADD_OPERATION_SCOPE_KEY = "mock_server_editor_add_command_scope"
+
